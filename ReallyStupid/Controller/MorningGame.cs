@@ -10,12 +10,12 @@ namespace ReallyStupid
 	/// <summary>
 	/// This is the main type for your game.
 	/// </summary>
-	public class Game1 : Game
+	public class MorningGame : Game
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
 
-		public Game1 ()
+		public MorningGame ()
 		{
 			graphics = new GraphicsDeviceManager (this);
 			Content.RootDirectory = "Content";
@@ -71,7 +71,7 @@ namespace ReallyStupid
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw (GameTime gameTime)
 		{
-			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
+			graphics.GraphicsDevice.Clear (Color.LightSteelBlue);
             
 			//TODO: Add your drawing code here
             
