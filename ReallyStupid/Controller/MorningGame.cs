@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Storage;
 using Microsoft.Xna.Framework.Input;
+using ReallyStupid.Model;
 
 namespace ReallyStupid
 {
@@ -14,6 +15,8 @@ namespace ReallyStupid
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
+
+		private Player playerOne;
 
 		public MorningGame ()
 		{
