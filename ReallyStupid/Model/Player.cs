@@ -15,7 +15,7 @@ namespace ReallyStupid.Model
 
 
 		// Animation representing the player
-		public Animation PlayerAnimation;
+		public Animation PlayerAnimation
 		{
 			get { return playerAnimation; }
 			set { playerAnimation = value; }

@@ -5,10 +5,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ReallyStupid
+namespace ReallyStupid.View
 {
 	public class Animation
 	{
+		public Animation ()
+		{
+			
+		}
 		// The image representing the collection of images used for animation
 		private Texture2D spriteStrip;
 
@@ -29,7 +33,7 @@ namespace ReallyStupid
 		// The time since we last updated the frame
 		private int elapsedTime;
 
-		puc int ElapsedTime
+		public int ElapsedTime
 		{
 			get { return elapsedTime; }
 			set { elapsedTime = value; }
@@ -65,7 +69,7 @@ namespace ReallyStupid
 		// The color of the frame we will be displaying
 		private Color color;
 
-		public int Color 
+		public Color Color 
 		{
 			get { return color; }
 			set { color = value; }
@@ -82,7 +86,7 @@ namespace ReallyStupid
 
 		private int frameWidth; 
 
-		public int FrameWidth;
+		public int FrameWidth
 		{
 			get { return frameWidth; }
 			set { frameWidth = value; }
@@ -91,34 +95,34 @@ namespace ReallyStupid
 
 		private int frameHeight;
 		// Height of a given frame
-		public int FrameHeight;
+		public int FrameHeight
 		{
-			get { return frameHeight;} 
+			get { return frameHeight; } 
 			set { frameHeight = value; }
 		}
 
-		private bool Active;
+		private bool active;
 		// The state of the Animation
-		public bool Active;
+		public bool Active
 		{
 			get { return active; }
 			set { active = value; }
 		}
 
-		private bool Looping;
+		private bool looping;
 		// Determines if the animation will keep playing or deactivate after one run
-		public bool Looping;
+		public bool Looping
 		{
 			get { return looping; }
-			set { looping value; }
+			set { looping = value; }
 		}
 
-		private Vector2 Position;
+		private Vector2 position;
 		// Width of a given frame
-		public Vector2 Position;
+		public Vector2 Position
 		{
 			get { return position; }
-			set { position value; } 
+			set { position = value; } 
 		}
 
 		public void Initialize(Texture2D texture, Vector2 position,
@@ -195,9 +199,7 @@ namespace ReallyStupid
 			}
 		}
 
-		public Animation ()
-		{
-		}
+
 	}
 }
 
