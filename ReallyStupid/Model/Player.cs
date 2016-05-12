@@ -18,7 +18,7 @@ namespace ReallyStupid.Model
 		public Vector2 Position;
 
 		// State of the player
-		public bool Active;
+		public bool Active
 		{
 			get { return active; }
 			set { active = value; }
@@ -51,7 +51,7 @@ namespace ReallyStupid.Model
 
 		}
 
-		public void Initalize(Texture2D texture, Vector2 position)
+		public void Initialize(Texture2D texture, Vector2 position)
 		{
 			this.active = true;
 			this.health = 100;

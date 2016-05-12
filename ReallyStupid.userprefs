@@ -2,7 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ReallyStupid/Controller/MorningGame.cs">
     <Files>
-      <File FileName="ReallyStupid/Controller/MorningGame.cs" Line="74" Column="55" />
+      <File FileName="ReallyStupid/Controller/MorningGame.cs" Line="17" Column="27" />
+      <File FileName="ReallyStupid/Model/Player.cs" Line="70" Column="111" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
