@@ -2,6 +2,7 @@
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using ReallyStupid.View;
 
 namespace ReallyStupid.Model
 {
@@ -10,7 +11,15 @@ namespace ReallyStupid.Model
 		private int score;
 		private bool active;
 		private int health;
+		private Animation playerAnimation;
 
+
+		// Animation representing the player
+		public Animation PlayerAnimation;
+		{
+			get { return playerAnimation; }
+			set { playerAnimation = value; }
+		}
 		// Animation representing the player
 		public Texture2D PlayerTexture;
 
@@ -34,13 +43,13 @@ namespace ReallyStupid.Model
 		// Get the width of the player ship
 		public int Width
 		{
-			get { return PlayerTexture.Width; }
+			get { return PlayerAnimation.FrameWidth; }
 		}
 
 		// Get the height of the player ship
 		public int Height
 		{
-			get { return PlayerTexture.Height; }
+			get { return PlayerAnimation.FrameHeight; }
 		}
 
 
@@ -60,14 +69,34 @@ namespace ReallyStupid.Model
 			this.Position = position;
 		}
 
-		public void Update()
+		// Initialize the player
+		public void Initialize(Animation animation, Vector2 position)
 		{
-			
+			this.playerAnimation = animation;
+
+			// Set the starting position of the player around the middle of the screen and to the back
+			this.Position = position;
+
+			// Set the player to be active
+			this.active = true;
+
+			// Set the player health
+			this.health = 100;
+
+			this.score = 0;
 		}
 
+		// Update the player animation
+		public void Update(GameTime gameTime)
+		{
+			PlayerAnimation.Position = Position;
+			PlayerAnimation.Update(gameTime);
+		}
+
+		// Draw the player
 		public void Draw(SpriteBatch spriteBatch)
 		{
-			spriteBatch.Draw(PlayerTexture, Position, null, Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
+			PlayerAnimation.Draw(spriteBatch);
 		}
 
 
