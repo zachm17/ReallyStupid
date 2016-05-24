@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReallyStupid.View
-
+using ReallyStupid.Controller
 
 namespace ReallyStupid.Model
 {

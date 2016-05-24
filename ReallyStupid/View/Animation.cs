@@ -4,6 +4,8 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using ReallyStupid.Model
+using ReallyStupid.Controller
 
 namespace ReallyStupid.View
 {

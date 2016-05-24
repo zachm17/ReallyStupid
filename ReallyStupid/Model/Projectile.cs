@@ -3,6 +3,8 @@
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using ReallyStupid.Controller
+using ReallyStupid.View
 
 
 namespace ReallyStupid.Model
