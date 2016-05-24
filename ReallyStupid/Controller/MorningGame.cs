@@ -112,7 +112,7 @@ namespace ReallyStupid.Controller
 			bgLayer1.Initialize(Content, "Texture/bgLayer1", GraphicsDevice.Viewport.Width, -1);
 			bgLayer2.Initialize(Content, "Texture/bgLayer2", GraphicsDevice.Viewport.Width, -2);
 
-			enemyTexture = Content.Load<Texture2D>("mineAnimation");
+			enemyTexture = Content.Load<Texture2D>("Texture/mineAnimation");
 
 			mainBackground = Content.Load<Texture2D>("Texture/mainBackground");
 		}
