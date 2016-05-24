@@ -1,41 +1,38 @@
-﻿using System;
+﻿// ParallaxingBackground.cs
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using ReallyStupid.Model;
-using ReallyStupid.Controller;
 
-
-namespace ReallyStupid.view
+namespace Shooter
 {
-	public class ParallaxingBackground
+	class ParallaxingBackground
 	{
+
 		// The image representing the parallaxing background
-		private Texture2D texture;
+		Texture2D texture;
+
 
 		// An array of positions of the parallaxing background
-		private Vector2 [] positions;
+		Vector2[] positions;
 
 		// The speed which the background is moving
-		private int speed;
-
-		public int Speed
-		{
-			get { return speed; }
-			set { speed = value; }
-		}
+		int speed;
 
 		public void Initialize(ContentManager content, String texturePath, int screenWidth, int speed)
 		{
 			// Load the background texture we will be using
 			texture = content.Load<Texture2D>(texturePath);
 
+
 			// Set the speed of the background
 			this.speed = speed;
+
 
 			// If we divide the screen with the texture width then we can determine the number of tiles need.
 			// We add 1 to it so that we won't have a gap in the tiling
 			positions = new Vector2[screenWidth / texture.Width + 1];
+
 
 			// Set the initial positions of the parallaxing background
 			for (int i = 0; i < positions.Length; i++)
@@ -62,6 +59,7 @@ namespace ReallyStupid.view
 					}
 				}
 
+
 				// If the speed has the background moving to the right
 				else
 				{
@@ -81,8 +79,6 @@ namespace ReallyStupid.view
 				spriteBatch.Draw(texture, positions[i], Color.White);
 			}
 		}
-
-
 	}
 }
 
