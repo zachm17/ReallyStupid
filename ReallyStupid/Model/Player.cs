@@ -1,44 +1,24 @@
 ﻿using System;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using ReallyStupid.View;
+using ReallyStupid.View
+
 
 namespace ReallyStupid.Model
 {
-	public class Player
+	class Player
 	{
-		private int score;
-		private bool active;
-		private int health;
-		private Animation playerAnimation;
-
-
 		// Animation representing the player
-		public Animation PlayerAnimation
-		{
-			get { return playerAnimation; }
-			set { playerAnimation = value; }
-		}
-		// Animation representing the player
-		public Texture2D PlayerTexture;
+		public Animation PlayerAnimation;
 
 		// Position of the Player relative to the upper left side of the screen
 		public Vector2 Position;
 
 		// State of the player
-		public bool Active
-		{
-			get { return active; }
-			set { active = value; }
-		}
+		public bool Active;
 
 		// Amount of hit points that player has
-		public int Health
-		{
-			get { return health; }
-			set { health = value; }
-		}
+		public int Health;
 
 		// Get the width of the player ship
 		public int Width
@@ -53,38 +33,24 @@ namespace ReallyStupid.Model
 		}
 
 
-		public int Score
-		{
-			get { return score; }
-			set { score = value; }
-
-		}
-
-		public void Initialize(Texture2D texture, Vector2 position)
-		{
-			this.active = true;
-			this.health = 100;
-			this.score = 0;
-			this.PlayerTexture = texture;
-			this.Position = position;
-		}
-
 		// Initialize the player
 		public void Initialize(Animation animation, Vector2 position)
 		{
-			this.playerAnimation = animation;
+			PlayerAnimation = animation;
+
 
 			// Set the starting position of the player around the middle of the screen and to the back
-			this.Position = position;
+			Position = position;
+
 
 			// Set the player to be active
-			this.active = true;
+			Active = true;
+
 
 			// Set the player health
-			this.health = 100;
-
-			this.score = 0;
+			Health = 100;
 		}
+
 
 		// Update the player animation
 		public void Update(GameTime gameTime)
@@ -99,7 +65,5 @@ namespace ReallyStupid.Model
 			PlayerAnimation.Draw(spriteBatch);
 		}
 
-
 	}
 }
-
